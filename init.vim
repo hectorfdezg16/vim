@@ -209,7 +209,7 @@ set noshowmode  " No mostrar el modo actual (ya lo muestra la barra de estado)
 let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal']
 let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
 
-"mostrar mejor mensajes ale
+"show ale messages
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
