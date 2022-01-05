@@ -1,0 +1,23 @@
+{
+  "diagnostic.displayByAle": true,
+  "suggest.languageSourcePriority": 99,
+  "tabnine.shortcut": "TN",
+  "tabnine.triggers": [],
+  "tabnine.priority": 98,
+  "tabnine.binary_path": "",
+  "tabnine.disable_filetypes": [],
+  "tabnine.disable_file_regex": [],
+  "tabnine.disable_line_regex": [],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact",
+    "typescript.tsx",
+    "json",
+    "graphql",
+    "vue"
+  ]
+}
