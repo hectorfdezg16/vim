@@ -1,3 +1,3 @@
 # vim
 
-My vim conf file
+My actual configuration for Neovim!
