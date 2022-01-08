@@ -6,8 +6,8 @@ call plug#begin('~/.local/share/nvim/site/autoload')
 
 " themes
 Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'sainnhe/everforest'
 
 " visual
 Plug 'vim-airline/vim-airline'
@@ -42,7 +42,6 @@ Plug 'sirver/ultisnips'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ervandew/supertab'
 Plug 'w0rp/ale'
 
 " test
@@ -88,8 +87,8 @@ let mapleader=" "
 
 " theme conf
 set background=dark
-let g:gruvbox_contrast_dark="hard"
-colorscheme PaperColor
+let g:everforest_background = 'hard'
+colorscheme everforest
 
 nmap <F5> :source ~/.config/nvim/init.vim<CR>
 vmap <F5> :source ~/.config/nvim/init.vim<CR>
@@ -131,9 +130,6 @@ nnoremap <c-g> :GitFiles<CR>
 let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_use_caching=0
 
-" reverse navigation dir. (from top to bottom)
-let g:SuperTabDefaultCompletionType = '<c-n>'
-
 " signify
 " change these if you want
 let g:signify_sign_add               = '+'
@@ -152,9 +148,9 @@ nmap <leader>gJ 9999<leader>gJ
 nmap <leader>gK 9999<leader>gk
 
 " if you like colors instead
-highlight SignifySignAdd    ctermfg=black ctermbg=green  guifg=#000000 guibg=#00ff00
-highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#f00000
-highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
+" highlight SignifySignAdd    ctermfg=black ctermbg=green  guifg=#000000 guibg=#00ff00
+" highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#f00000
+" highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
 
 " ultisnips
 " trigger configuration, quick start: <tab>, <c-b>, <c-z>
@@ -177,7 +173,8 @@ let g:indentLine_char_list = ['|', '┊']
 nmap s <Plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 
-" comment
+" remap Esc & comment
+" inoremap jk<Esc>
 vmap ++ <Plug>NERDCommenterToggle
 nmap ++ <Plug>NERDCommenterToggle
 
@@ -191,6 +188,7 @@ map <leader>nt :NERDTree<CR>
 nmap <leader>r :NERDTreeFocus<CR>R<c-w><c-p>
 " Start NERDTree and leave the cursor in it.
 autocmd VimEnter * NERDTree
+let g:NERDTreeIgnore=['^node_modules$']
 
 " highlight devicons
 let g:NERDTreeFileExtensionHighlightFullName=1
